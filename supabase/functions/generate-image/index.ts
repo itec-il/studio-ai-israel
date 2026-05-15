@@ -34,8 +34,8 @@ Deno.serve(async (req) => {
         default: return '';
       }
     })();
-    const KREA_API_KEY_PRIMARY = Deno.env.get("KREA_API_KEY");
-    if (!KREA_API_KEY_PRIMARY) throw new Error("KREA_API_KEY is not configured");
+    const LOVABLE_API_KEY = Deno.env.get("LOVABLE_API_KEY");
+    if (!LOVABLE_API_KEY) throw new Error("LOVABLE_API_KEY is not configured");
 
     const mediaUrls = [
       ...(action === "edit" && imageUrl ? [imageUrl] : []),
